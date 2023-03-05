@@ -1,26 +1,366 @@
-html{
-    font-size:22px;
+/* --------------------------------RESET------------------------------------- */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
+
+html{
+    font-size:16px;
+    scroll-behavior: smooth;
+}
+
+
+
+
+/* ------------------------------VARIABLES--------------------------------------- */
+:root {
+    --HEADER-BGCOLOR: whitesmoke;
+
+    --PRIMARY-COLOR: #000000cf;
+    --SECONDARY-COLOR: #333333cd;
+
+    --BLOCK-WIDTH: 100%;
+    --ALIGN-CENTER: center;
+
+    --FS-H1: 3em;
+    --FS-H2: 2em;
+    --FS-H3: 1.5em;
+    --FS-P: 1.2em;
+
+    --FONT-FAMILY: 'Courier New', Courier, monospace;
+
+    --MARGIN-SM: 0.5em;
+    --MARGIN--MD: 1em;
+    --MARGIN--LG: 1.5em;
+    --MARGIN--XL: 2em;
+    
+    --PADDING-SM: 0.5em;
+    --PADDING--MD: 1em;
+    --PADDING--LG: 1.5em;
+    --PADDING--XL: 2em;
+
+    --BORDER-CIRCLE: 50%
+
+    --TABLE-BORDER: 2px solid #333;
+    --TABLE-BORDER-RADIUS: 10px;
+
+}
+
+
+
+.nowrap {
+    white-space: nowrap;
+}
+
+
+/* ----------------------------GENERAL STYLES--------------------------- */
 
 body {
 
     min-height: 100vh;
     max-width: 800px;
     margin: 0 auto;
-    padding: 1rem;
-    border-left: 1px solid #333;
-    border-right:1px solid #333;
-}
-
-th, td,caption{
-
     border: 1px solid #333;
-    font-family: 'Courier New', Courier, monospace;
-    border-collapse: collapse;
-    padding:0.5rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-color: orange;
+}
+
+header {
+    background-color: #1e8fff6a; 
+    background-color: rgba(255, 255, 255, 0.902); 
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
 
 }
 
-tfoot{
+.header__title {
+    color: lime;
+    font: bolder var(--FS-H1) var(--FONT-FAMILY);
+    padding: var(--PADDING--SM);
+    margin-top: var(--MARGIN-SM);
+}
+
+.header__title, 
+.header__navbar,
+.header__ul,
+.section-trivia,
+.main__section-menu {
+    width: 100%;
+    text-align: var(--ALIGN-CENTER);
+
+}
+
+
+.header__navbar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__ul {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: var(--PADDING--MD);
+
+}
+
+.header__ul li {
+    padding: 1rem;
+
+}
+
+.header__ul li a {
+    display: block;
+    text-decoration: none;
+    font-size: var(--FS-P);
+    color: var(--SECONDARY-COLOR)
+}
+
+.header__ul li:hover a, 
+.header__ul li:focus a {
+    border: 2px solid #000;
+    border-radius: var(--TABLE-BORDER-RADIUS);
+    padding: 0.3rem;
+    color: var(--PRIMARY-COLOR);
+    transform: scale(1.2);
+    transition: all 0.2s ease;
+}
+
+.header__figure {
+    z-index: 0.5;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-color: var(--PRIMARY-COLOR);
+}
+
+
+.header__figure figcaption {
+    width: 100%;
     text-align: center;
+    color: limegreen;
+    padding: var(--PADDING-SM);
+    font: bold var(--FS-P) var(--FONT-FAMILY);
+}
+
+main {
+    background-color: white;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__section-title {
+    scroll-margin: 2.5em;
+    margin: 2em auto;
+    font: bold var(--FS-H2) var(--FONT-FAMILY);
+    text-align: var(--ALIGN-CENTER);
+    color: rgb(79, 71, 55);
+}
+
+.about {
+    margin: 0.5em;
+    border: 2px solid #323805a9;
+    border-radius: var(--TABLE-BORDER-RADIUS)
+}
+
+.main__section p {
+    padding: var(--PADDING--MD);
+    color:rgb(128, 88, 12);
+    font-size: var(--FS-P);
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.section-trivia {
+    background-color: #33333337;
+    border: 2px solid #333;
+    border-radius: 12px;;
+    padding: 1em;
+    margin: 1.5em auto;
+    width: 80%
+    
+}
+
+.main__section .trivia {
+    border: 2px solid #333;
+    color: #373006ca;
+    border-radius: 10px;
+    margin: 0.87em auto;
+    width: 80%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+
+.main__section-aside {
+    text-align: left;
+    margin-left: 0.87rem;
+    padding: 0.3rem;
+    color: #c29416;
+
+}
+
+.main__section-aside details summary{
+    font-size: var(--FS-P);
+    margin-bottom: 1em;
+}
+
+.main__section-menu {
+    background-color: rgba(255, 192, 203, 0.125);
+    margin-top: 7em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+.main__section-menu h2 {
+    font: bolder var(--FS-H2) var(--FONT-FAMILY);
+    scroll-margin-top: 2em;
+
+}
+
+.main__section-table {
+    font-size: 1.4em;
+    border-collapse: collapse;
+    width: 80%;
+    margin: 2rem auto;
+}
+
+
+caption {
+    border-radius: 16px 16px 0 0;
+    font: italic var(--FS-P) monospace;
+}
+
+th {
+    font-weight: 550;
+}
+
+caption, tr, th, td, tbody, tfoot{
+    font-style: italic;
+    padding: 1rem;
+    border: 2px solid rgb(124, 18, 18);
+}
+
+
+.back-ttop, .back-ttop a {
+    display: block;
+    width: 80%;
+    font-size: var(--FS-P);
+    text-decoration: none;
+    margin: 0.5em;
+
+}
+
+footer {
+    padding: 1em;
+    width: 100%;
+    text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #000;
+    }
+
+    .header {
+        background-color: #ffffff1d;
+    }
+
+    .header__navbar {
+        border-radius: 160px;
+
+    }
+
+    .header__ul li a{
+        color: #fff;
+    }
+
+    .header__ul li:hover a {
+        color: azure;
+        border-color: azure;
+    }
+    main {
+        background-color:rgba(54, 39, 9, 0.166);
+    }
+
+    .figure__image-container {
+        margin-top: 0rem;
+        border: 1px solid gray;
+        border-top: none;
+        width: 797px;
+        height: 550px;
+        background-color: rgba(0, 255, 4, 0.252);
+        background-image: url("../img/tacos_and_drink_400x267.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .transparent {
+        width: 797px;
+        height: 550px;
+        /* border-radius: 0 0 16px 16px; */
+        background-color: #3333337d;
+    }
+
+    .header__figure figcaption {
+        background-color:#ffffff0e;
+        width: 100%;
+    }
+
+    .about, .about h2 {
+        background-color: #333;
+        color: azure;
+        color: #14d6a3;
+    }
+
+    .about p {
+        color: #109f79e2;
+    }
+
+    .section-trivia {
+        background-color: #00000076;
+        border-radius: 29px;
+    }
+
+    .main__section .section-trivia h3 {
+        color:#08e6ab;
+    }
+
+    .menu {
+        background-color: #333;
+        color: rgba(19, 241, 19, 0.895);
+    }
+
+    caption, tr, tbody, td, th {
+        color: azure;
+        border: 2px solid rgba(240, 255, 255, 0.232);
+    }
+
+    .back-ttop a {
+        color: rgba(240, 255, 255, 0.558);
+    }
+    
+    .back-ttop:hover a {
+        color: rgba(240, 255, 255, 0.739);
+    }
+
+    footer {
+        background-color: #333;
+        color: rgba(240, 255, 255, 0.617);
+    }
+}
+/* MEDIA SCREEN */
+
+@media screen and (max-width: 410px) {
+
 }

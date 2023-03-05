@@ -1,58 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Morayo Kolawole">
-        <meta name="description" content="This shows Taco's Hours">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Morayo Kolawole" />
+    <meta name="description" content="This shows Taco's Hours" />
 
-        <link rel="icon" type="image/x-icon" href="/frontend-projects/img/icons8-taco-80.png">
-        <link rel="stylesheet" href="/frontend-projects/css/main.css">
-        <title>LTS Hours</title>
-    </head>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/frontend-projects/img/icons8-taco-80.png"
+    />
+    <link rel="stylesheet" href="/frontend-projects/css/main.css" />
+    <title>LTS Hours</title>
+  </head>
 
-    <body>
-        <header>
-            <h1>The Little Taco Shop Hours</h1>
+  <body>
+    <header>
+      <h1 class="header__title">The Little Taco Shop Hours</h1>
 
-            <nav>
+      <nav class="header__navbar">
+        <ul>
+          <li class="header__lists">
+            <a href="index.html"
+              >Home <abbr title="Little Taco Shop">LTS</abbr></a
+            >
+          </li>
+          <li class="header__lists">
+            <a href="index.html#aboutLTS" target="_blank">About LTS</a>
+          </li>
+          <li class="header__lists">
+            <a href="index.html#ourMenu" target="_blank">Our Menu</a>
+          </li>
+          <li class="header__lists">
+            <a href="contact.html" target="_blank">Contact US</a>
+          </li>
+        </ul>
 
-                <ul>
-                    <li><a href="index.html">Home <abbr title="Little Taco Shop">LTS</abbr></a></li>
-                    <li><a href="index.html#aboutLTS" target="_blank">About LTS</a></li>
-                    <li><a href="index.html#ourMenu" target="_blank">Our Menu</a></li>
-                    <li><a href="contact.html" target="_blank">Contact US</a></li>
-                </ul>
+        <figure class="header__figure">
+          <div class="figure__image-container">
+            <img src="img/tacos_tray_400x267.png" title="Tacos and Drinks" />
+          </div>
+          <figcaption>A Tray of Tasty Tacos</figcaption>
+        </figure>
+      </nav>
+    </header>
+    <hr />
+    <main>
+      <p>We are open 7 days a week!</p>
 
-                <figure>
-                    <img src="img/tacos_tray_400x267.png" title="Tacos and Drinks">
-                    <figcaption>
-                        A Tray of Tasty Tacos
-                    </figcaption>
-                </figure>
-            </nav>
-        </header>
-        <hr>
-        <main>
-            
-                <p>We are open 7 days a week!</p>
+      <dl class="main__datalist">
+        <dt>Sunday-Thursday</dt>
+        <dd>11am-9pm</dd>
 
-                <dl>
-                    <dt>Sunday-Thursday</dt>
-                    <dd>11am-9pm</dd>
+        <dt>Friday-Saturday</dt>
+        <dd>11am-11pm</dd>
+      </dl>
 
-                    <dt>Friday-Saturday</dt>
-                    <dd>11am-11pm</dd>
-                
-                </dl>
-
-                <p><a href="#">Back to Top</a></p>
-
-        </main>
-        <hr>
-        <footer>
-            <p>Copyright &copy; The Little Taco Shop</p>
-        </footer>
-    </body>
+      <p><a href="#">Back to Top</a></p>
+    </main>
+    <hr />
+    <footer>
+      <p>Copyright &copy; The Little Taco Shop</p>
+    </footer>
+  </body>
 </html>

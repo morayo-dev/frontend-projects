@@ -1,81 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Morayo Kolawole">
-        <meta name="description" content=" Little Taco Shop Contact Form">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Morayo Kolawole" />
+    <meta name="description" content=" Little Taco Shop Contact Form" />
 
-        <link rel="icon" type="image/x-icon" href="/frontend-projects/img/icons8-taco-80.png">
-        <link rel="stylesheet" href="css/main.css">
-        <title>Contact Us -LTS</title>
-    </head>
-    
-    <body>
-        
-        <header>
-            <h1>Contact Us</h1>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/frontend-projects/img/icons8-taco-80.png"
+    />
+    <link rel="stylesheet" href="css/contact.css" />
+    <title>Contact Us -LTS</title>
+  </head>
 
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#aboutLTS">About LTS</a></li>
-                    <li><a href="index.html#ourMenu">Menu</a></li>
-                    <li><a href="hours.html">Store Hours</a></li>
-                    
-                </ul>
+  <body>
+    <header>
+      <h1 class="header__title">Contact Us</h1>
 
-                <figure>
-                    <img src="/frontend-projects/img/tacos_close_up_400x260.png" title="Taco Trays">
-                    <figcaption>
-                        Little Taco Shop Tacos
-                    </figcaption>
-                </figure>
-            </nav>
-        </header>
+      <nav class="header__navbar">
+        <ul>
+          <li class="header__navbar-list"><a href="index.html">Home</a></li>
+          <li class="header__navbar-list"><a href="index.html#aboutLTS">About LTS</a></li>
+          <li class="header__navbar-list"><a href="index.html#ourMenu">Menu</a></li>
+          <li class="header__navbar-list"><a href="hours.html">Store Hours</a></li>
+        </ul>
 
-        <main>
-            <section>
-                <h2>Our Contact Form</h2>
+        <figure class="header__figure">
+            <div class="figure__image-container">
+          <img
+            src="./img/tacos_close_up_400x260.png"
+            title="Taco Trays"
+          /></div>
+          <figcaption>Little Taco Shop Tacos</figcaption>
+        </figure>
+      </nav>
+    </header>
 
-                <form action="">
-                    <fieldset>
-                        <legend>Send Us A Message</legend>
+    <main class="main">
+      <section class="main__section">
+        <h2 class="main__section-title">Our Contact Form</h2>
 
-                        <p>
-                            <label for="name">Name: </label>
-                            <input type="text" name="name" id="name" placeholder="Morayo">
-                        </p>
-                        <p>
-                            <label for="email">Email: </label>
-                            <input type="email" name="email" id="email" placeholder="morayo@example">
-                        </p>
+        <form action="" class="main__form">
+          <fieldset class="filedset">
+            <legend>Send Us A Message</legend>
 
-                        <label for="message">Your Message: </label>
-                        <br>
-                        <textarea name="message" id="message" rows="10" cols="50"></textarea>
+            <p>
+              <label class="fieldset__label" for="name">Name: </label>
+              <input class="fieldset__input" type="text" name="name" id="name" placeholder="Morayo" />
+            </p>
+            <p>
+              <label class="fieldset__label" for="email">Email: </label>
+              <input class="fieldset__input"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="morayo@example"
+              />
+            </p>
 
-                    </fieldset>
-                    <button type="submit">Send</button>
-                    <button type="reset">Reset</button>
-                </form>
-            </section>
+            <label class="fieldset__label" for="message">Your Message: </label>
+            <br />
+            <textarea class="fieldset__textarea"
+              name="message"
+              id="message"
+              rows="10"
+              cols="50"
+            ></textarea>
+          </fieldset>
+          <button class="main__section-button" type="submit">Send</button>
+          <button class="main__section-button" type="reset">Reset</button>
+        </form>
+      </section>
 
-            <section>
-                <h2>Our Location</h2>
-                <address>
-                    555 Taco Temptation Lane, Suite T <br>
-                    Kansas City, MO 55555-5555
-                    <br>
-                    <br>
-                    Phone: <a href="tel:+5555555555">555-555-555</a>
-                
-                </address>
-
-                
-
-            </section>
-        </main>
-    </body>
+      <section class="main__section">
+        <h2 class="main__section_title h2">Our Location</h2>
+        <address>
+          555 Taco Temptation Lane, Suite T <br />
+          Kansas City, MO 55555-5555
+          <br />
+          <br />
+          Phone: <a href="tel:+5555555555">555-555-555</a>
+        </address>
+      </section>
+    </main>
+  </body>
 </html>
